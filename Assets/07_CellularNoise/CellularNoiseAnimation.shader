@@ -31,8 +31,7 @@
                         float2 neighbor = float2(x, y);
 
                         float2 p = random2(i + neighbor);
-                               p = 0.5 + 0.5 * sin((p + 0.1) * (_Time.y + 100));
-                            // p = 0.5 + 0.5 * sin(p  * _Time.y);
+                               p = 0.5 + 0.5 * sin(p * (_Time.y + 100));
 
                         minDistance = min(minDistance, length(neighbor + p - f));
                     }
